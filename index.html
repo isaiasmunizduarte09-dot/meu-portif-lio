@@ -265,37 +265,78 @@
 </div>
 <!-- Cole este código exatamente aqui, entre o </div> do modal e o </body> -->
   <script>
-    // 1. Mapeia os elementos do modal na tela
-    const modal = document.getElementById('modal-foto');
-    const fotoGrande = document.getElementById('foto-grande');
-    const botaoFechar = document.getElementById('fechar-modal');
+  // 1. Elementos do Modal (Tela Cheia)
+  const modal = document.getElementById('modal-foto');
+  const fotoGrande = document.getElementById('foto-grande');
+  const botaoFechar = document.getElementById('fechar-modal');
 
-    // 2. Procura todas as imagens dentro dos itens do seu carrossel
-    const imagens = document.querySelectorAll('.carrossel-item img');
+  // 2. Lista com todas as imagens do seu carrossel
+  const imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
+  let indiceAtual = 0; // Guarda qual foto está aberta no momento
 
-    // 3. Adiciona a função de clique em cada uma das fotos
-    imagens.forEach(img => {
-      img.style.cursor = 'pointer'; // Mostra a mãozinha do mouse ao passar por cima
-      
-      img.addEventListener('click', function() {
-        modal.style.display = 'flex';   // Torna o modal visível na tela inteira
-        fotoGrande.src = this.src;      // Troca a foto vazia pela foto que você clicou
-        fotoGrande.alt = this.alt;      // Copia o texto alternativo da foto
-      });
+  // 3. Cria os botões de Avançar e Voltar dinamicamente
+  const botaoAnterior = document.createElement('button');
+  botaoAnterior.innerHTML = '&#10094;'; // Ícone de seta <
+  botaoAnterior.setAttribute('style', 'position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
+
+  const botaoProximo = document.createElement('button');
+  botaoProximo.innerHTML = '&#10095;'; // Ícone de seta >
+  botaoProximo.setAttribute('style', 'position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
+
+  // Adiciona as setas dentro do painel escuro
+  modal.appendChild(botaoAnterior);
+  modal.appendChild(botaoProximo);
+
+  // 4. Função que atualiza a imagem exibida na tela cheia
+  function mostrarImagem(indice) {
+    if (indice < 0) indice = imagens.length - 1; // Se voltar da primeira, vai para a última
+    if (indice >= imagens.length) indice = 0;    // Se passar da última, volta para a primeira
+    
+    indiceAtual = indice;
+    fotoGrande.src = imagens[indiceAtual].src;
+    fotoGrande.alt = imagens[indiceAtual].alt;
+  }
+
+  // 5. Configura o clique inicial nas miniaturas do carrossel
+  imagens.forEach((img, index) => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      modal.style.display = 'flex';
+      mostrarImagem(index); // Abre a imagem certa pelo número dela na lista
     });
+  });
 
-    // 4. Fecha o modal ao clicar no botão de fechar (X)
-    botaoFechar.addEventListener('click', function() {
-      modal.style.display = 'none';     // Esconde a caixinha novamente
-    });
+  // 6. Eventos de clique nas setas de avançar e voltar
+  botaoAnterior.addEventListener('click', (e) => {
+    e.stopPropagation(); // Impede que o modal feche ao clicar na seta
+    mostrarImagem(indiceAtual - 1);
+  });
 
-    // 5. Fecha o modal se você clicar em qualquer parte escura fora da foto grande
-    modal.addEventListener('click', function(evento) {
-      if (evento.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  </script>
+  botaoProximo.addEventListener('click', (e) => {
+    e.stopPropagation(); // Impede que o modal feche ao clicar na seta
+    mostrarImagem(indiceAtual + 1);
+  });
+
+  // 7. Navegação extra usando as setas do teclado (Esquerda / Direita)
+  document.addEventListener('keydown', function(e) {
+    if (modal.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') mostrarImagem(indiceAtual - 1);
+      if (e.key === 'ArrowRight') mostrarImagem(indiceAtual + 1);
+      if (e.key === 'Escape') modal.style.display = 'none'; // Fecha no Esc
+    }
+  });
+
+  // 8. Funções de fechar o Modal (No X ou clicando no fundo)
+  botaoFechar.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
 </body>
 
 </html>
