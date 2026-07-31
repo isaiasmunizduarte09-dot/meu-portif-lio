@@ -3,31 +3,38 @@
 <head>
     <meta charset="UtF-8"> 
     <title>Meu Portfólio</title>
+
+    <head>
+  <!-- Outras tags que já estão aí (meta, title, etc) -->
+
+  <style>
+    /* O SEU CÓDIGO CSS DO CARROSSEL VAI ENTRAR AQUI */
+    .carrossel-container {
+      display: flex !important; /* Força as fotos a ficarem lado a lado */
+      gap: 15px; /* Deixa um espaço entre os desenhos */
+      overflow-x: auto; /* Cria a barra de rolagem/arrastar horizontal */
+      scroll-snap-type: x mandatory; /* Faz a foto grudar na tela ao arrastar */
+      padding: 10px 0;
+      -webkit-overflow-scrolling: touch; /* Melhora o deslize no celular */
+    }
+
+    .carrossel-item {
+      flex: 0 0 auto; /* IMPEDE que as imagens fiquem esmagadas */
+      scroll-snap-align: start; /* Ponto onde a foto se alinha ao arrastar */
+    }
+
+    .carrossel-item img {
+      width: 280px; /* Altere para a largura que você quiser */
+      height: 350px; /* Altere para a altura que você quiser */
+      object-fit: cover; /* Ajusta o desenho sem distorcer ou esticar */
+      border-radius: 8px; /* Deixa os cantos arredondados */
+    }
+  </style>
 </head>
-<style>
-    body {background-color: rgb(100, 188, 229);
-    color: rgba(192, 224, 241, 0.21);
-    font-family: sans-serif;
-    max-width: 800px; 
-    margin: 0 auto;
-    padding: 20px;
-    color:rgb(25, 27, 45)}
-    /*caixa do cabeçalho*/
-    header {
-        background-color: #98cefe;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-    section {
-        background-color:#98cefe;
-        padding: 25px;
-        margin: 20px;
-        max-width: 800px;
-        border-radius: 10px;
-    }
-    img {borde-radius: 10px;}
-</style>
+
+
+    
+</head>
 <body>
     <!--cabeçãlho-->
     <header>
@@ -79,6 +86,160 @@
         <a href="https://literate-space-fishstick-x565q6wrg7g5frg.github.dev/">Ver
         código no GitHub.
         </a></article><br>
+
+        <!--desenhos-->
+
+        <section id="desenhos">
+
+            <h2>Galeria de Arte</h2>
+            <p>Em-vindo ao meu espaço de criação! Aqui, traços e cores ganham vida,
+                 e cada desenho conta um pedacinho da minha imaginação</p>
+
+        <div class="carrossel-container"> 
+
+            <div class="carrossel-item">
+                <img src="angustia.jpeg" alt="Desenho 1" loading="lazy"> 
+            </div>
+
+         <div class="carrossel-item">
+                <img src="vinkin.jpeg" alt="Desenho 2 " loading="lazy">
+            </div>
+
+         <div class="carrossel-item">
+                <img src="yuna.jpeg" alt="Desenho 3" loading="lazy">
+            </div>
+
+        <div class="carrossel-item">
+                <img src="selvagem.jpeg" alt="Desenho 4" loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="romance.jpeg" alt="Desenho 5"loading="lazy">
+            </div>
+        
+        <div class="carrossel-item">
+                <img src="dance-macabree.jpeg" alt="Desenho 6" loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="darck.jpeg" alt="Desenho 7"loading="lazy">
+            </div>
+    
+        <div class="carrossel-item">
+                <img src="bela-rosto.jpeg" alt="Desenho 8"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="bella-corpo.jpeg" alt="Desenho 9"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="belmiro-bigode.jpeg" alt="Desenho 10"loading="lazy">
+            </div>
+        
+        <div class="carrossel-item">
+                <img src="camilla.jpeg" alt="Desenho 11"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="casal-de-anões.jpeg" alt="Desenho 12"loading="lazy">
+            </div>
+        
+            <div class="carrossel-item">
+                <img src="castelo.jpeg" alt="Desenho 12"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="ciborgue.jpeg" alt="Desenho 14"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="david.jpeg" alt="Desenho 15"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="demonio.jpeg" alt="Desenho 16"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="esquilo.jpeg" alt="Desenho 17"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="explorador.jpeg" alt="Desenho 18"loading="lazy">
+            </div>
+        <div class="carrossel-item">
+                <img src="female-ciborgue.jpeg" alt="Desenho 19"loading="lazy">
+            </div>
+
+        <div class="carrossel-item">
+                <img src="grão-maromba.jpeg" alt="Desenho 20"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="guerreiro.jpeg" alt="Desenho 21"loading="lazy">
+            </div>
+        
+        <div class="carrossel-item">
+                <img src="hbirda-selvagem.jpeg" alt="Desenho 22"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="hibrida.jpeg" alt="Desenho 23"loading="lazy">
+            </div>
+
+        <div class="carrossel-item">
+                <img src="lauana.jpeg" alt="Desenho 24" loading="lazy">
+            </div>
+        
+
+        <div class="carrossel-item">
+                <img src="loucura.jpeg" alt="Desenho 25"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="medo.jpeg" alt="Desenho 26"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="menina-bolada.jpeg" alt="Desenho 27"loading="lazy">
+            </div>
+        
+        <div class="carrossel-item">
+                <img src="pausa pra foto.jpeg" alt="Desenho 28"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="pé-de-bode.jpeg" alt="Desenho 29"loading="lazy">
+            </div>
+        
+            <div class="carrossel-item">
+                <img src="pescando.jpeg" alt="Desenho 30"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="peso-nas-costas.jpeg" alt="Desenho 31"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="rato-mago.jpeg" alt="Desenho 32"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="robo.jpeg" alt="Desenho 33"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="vespa.jpeg" alt="Desenho 34"loading="lazy">
+            </div>
+            
+        <div class="carrossel-item">
+                <img src="tempo-de-menino.jpeg" alt="Desenho 35"loading="lazy">
+            </div>
+            
+        <div>
+
+        </section>
        
     <!--conato-->
 
@@ -92,9 +253,49 @@
         </footer>
     </section>
     <main>
-
     </main>
-    
+    <!-- Caixinha que vai abrir a foto grande (fica invisível até você clicar) -->
+<div id="modal-foto" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
+  
+  <!-- Botão de fechar (X) -->
+  <span id="fechar-modal" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+  
+  <!-- Onde a foto grande vai aparecer -->
+  <img id="foto-grande" src="" style="max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
+</div>
+<!-- Cole este código exatamente aqui, entre o </div> do modal e o </body> -->
+  <script>
+    // 1. Mapeia os elementos do modal na tela
+    const modal = document.getElementById('modal-foto');
+    const fotoGrande = document.getElementById('foto-grande');
+    const botaoFechar = document.getElementById('fechar-modal');
+
+    // 2. Procura todas as imagens dentro dos itens do seu carrossel
+    const imagens = document.querySelectorAll('.carrossel-item img');
+
+    // 3. Adiciona a função de clique em cada uma das fotos
+    imagens.forEach(img => {
+      img.style.cursor = 'pointer'; // Mostra a mãozinha do mouse ao passar por cima
+      
+      img.addEventListener('click', function() {
+        modal.style.display = 'flex';   // Torna o modal visível na tela inteira
+        fotoGrande.src = this.src;      // Troca a foto vazia pela foto que você clicou
+        fotoGrande.alt = this.alt;      // Copia o texto alternativo da foto
+      });
+    });
+
+    // 4. Fecha o modal ao clicar no botão de fechar (X)
+    botaoFechar.addEventListener('click', function() {
+      modal.style.display = 'none';     // Esconde a caixinha novamente
+    });
+
+    // 5. Fecha o modal se você clicar em qualquer parte escura fora da foto grande
+    modal.addEventListener('click', function(evento) {
+      if (evento.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
