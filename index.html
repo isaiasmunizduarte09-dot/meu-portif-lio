@@ -125,9 +125,9 @@
     <footer id="contato">
         <h2>Vamos Conversar?</h2>
         <p>Estou em Lábrea-AM, buscando aprender novas habilidades e aberto a novos desafios.</p>
-        <p>E-mail: <a href="mailto:isaiasmunizduarte@gmail.com" style="color: cyan;">isaiasmunizduarte09@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaías-muniz-duarte-6a60273a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" style=" color: cyan;" target="_blank">linkedin.com/in/isaías-muniz-duarte-3b3b3b3b/</a></p>
-        <p>Ghithub: <a href="https://github.com/isaiasmunizduarte09-dot" style="color: cyan;">isaiasmunizduarte09-dot</a></p>
+        <p>E-mail: <a href="mailto:isaiasmunizduarte@gmail.com" style="color: #e60073;">isaiasmunizduarte09@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaías-muniz-duarte-6a60273a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" style=" color: #e60073;" target="_blank">linkedin.com/in/isaías-muniz-duarte-3b3b3b3b/</a></p>
+        <p>Ghithub: <a href="https://github.com/isaiasmunizduarte09-dot" style="color: #e60073;">isaiasmunizduarte09-dot</a></p>
         <p>&copy; 2026 - Isaías Muniz Duarte</p>
     </footer>
 
@@ -136,71 +136,99 @@
         <span id="fechar-modal" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
         <img id="foto-grande" src="" alt="Imagem ampliada" style="max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
     </div>
+ <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal-foto');
+    const fotoGrande = document.getElementById('foto-grande');
+    const botaoFechar = document.getElementById('fechar-modal');
+    
+    if (!modal || !fotoGrande) return;
 
-    <!-- JavaScript Modal Script -->
-    <script>
-        const modal = document.getElementById('modal-foto');
-        const fotoGrande = document.getElementById('foto-grande');
-        const botaoFechar = document.getElementById('fechar-modal');
+    let imagens = [];
+    let indiceAtual = 0;
 
-        const imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
-        let indiceAtual = 0;
+    // Criando os botões com classes CSS em vez de inline styles
+    const botaoAnterior = document.createElement('button');
+    botaoAnterior.className = 'modal-btn modal-btn-prev';
+    botaoAnterior.innerHTML = '&#10094;';
+    botaoAnterior.setAttribute('aria-label', 'Imagem anterior');
 
-        const botaoAnterior = document.createElement('button');
-        botaoAnterior.innerHTML = '&#10094;';
-        botaoAnterior.setAttribute('style', 'position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
+    const botaoProximo = document.createElement('button');
+    botaoProximo.className = 'modal-btn modal-btn-next';
+    botaoProximo.innerHTML = '&#10095;';
+    botaoProximo.setAttribute('aria-label', 'Próxima imagem');
 
-        const botaoProximo = document.createElement('button');
-        botaoProximo.innerHTML = '&#10095;';
-        botaoProximo.setAttribute('style', 'position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
+    modal.appendChild(botaoAnterior);
+    modal.appendChild(botaoProximo);
 
-        modal.appendChild(botaoAnterior);
-        modal.appendChild(botaoProximo);
+    function atualizarListaImagens() {
+        imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
+    }
 
-        function mostrarImagem(indice) {
-            if (indice < 0) indice = imagens.length - 1;
-            if (indice >= imagens.length) indice = 0;
-            
-            indiceAtual = indice;
-            fotoGrande.src = imagens[indiceAtual].src;
-            fotoGrande.alt = imagens[indiceAtual].alt;
+    function mostrarImagem(indice) {
+        if (imagens.length === 0) return;
+        
+        // Loop de navegação (ciclo contínuo)
+        if (indice < 0) indice = imagens.length - 1;
+        if (indice >= imagens.length) indice = 0;
+        
+        indiceAtual = indice;
+        fotoGrande.src = imagens[indiceAtual].src;
+        fotoGrande.alt = imagens[indiceAtual].alt || 'Imagem ampliada';
+    }
+
+    function abrirModal(index) {
+        atualizarListaImagens();
+        mostrarImagem(index);
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Evita rolagem da página ao fundo
+        
+        // Adiciona atalhos de teclado apenas enquanto o modal estiver aberto
+        document.addEventListener('keydown', gerenciarTeclas);
+    }
+
+    function fecharModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Restaura a rolagem da página
+        document.removeEventListener('keydown', gerenciarTeclas);
+    }
+
+    function gerenciarTeclas(e) {
+        if (e.key === 'ArrowLeft') mostrarImagem(indiceAtual - 1);
+        if (e.key === 'ArrowRight') mostrarImagem(indiceAtual + 1);
+        if (e.key === 'Escape') fecharModal();
+    }
+
+    // Delegação de eventos no contêiner para abrir o modal
+    document.addEventListener('click', (e) => {
+        const imgClicada = e.target.closest('.carrossel-item img');
+        if (imgClicada) {
+            atualizarListaImagens();
+            const index = imagens.indexOf(imgClicada);
+            if (index !== -1) abrirModal(index);
         }
+    });
 
-        imagens.forEach((img, index) => {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', function() {
-                modal.style.display = 'flex';
-                mostrarImagem(index);
-            });
-        });
+    // Controles dos botões do modal
+    botaoAnterior.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mostrarImagem(indiceAtual - 1);
+    });
 
-        botaoAnterior.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mostrarImagem(indiceAtual - 1);
-        });
+    botaoProximo.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mostrarImagem(indiceAtual + 1);
+    });
 
-        botaoProximo.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mostrarImagem(indiceAtual + 1);
-        });
+    if (botaoFechar) {
+        botaoFechar.addEventListener('click', fecharModal);
+    }
 
-        document.addEventListener('keydown', function(e) {
-            if (modal.style.display === 'flex') {
-                if (e.key === 'ArrowLeft') mostrarImagem(indiceAtual - 1);
-                if (e.key === 'ArrowRight') mostrarImagem(indiceAtual + 1);
-                if (e.key === 'Escape') modal.style.display = 'none';
-            }
-        });
-
-        botaoFechar.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
-
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
+    // Fechar ao clicar fora da imagem
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) fecharModal();
+    });
+});
+     </script>
 </body>
 </html>
