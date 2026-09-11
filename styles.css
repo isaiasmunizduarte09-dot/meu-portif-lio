@@ -18,7 +18,7 @@ h1 {
     font-size: 3rem;
     text-align: center;
     width: 100%;
-    text-shadow: 0 0 5px #00e5ff, 0 0 15px #00e5ff, 0 0 30px rgba(0, 229, 255, 0.6);
+    text-shadow: 0 0 5px #e60073, 0 0 15px #e60073, 0 0 30px rgba(0, 229, 255, 0.6);
 
 }
 
@@ -32,7 +32,7 @@ h1 {
     top: 15px;
     left: 15px;
     font-size: 24px;
-    color: cyan;
+    color: #e60073;
     cursor: pointer;
     z-index: 1001;
     padding: 5px 12px;
@@ -80,7 +80,7 @@ nav {
 
 nav a {
   
-    color: cyan;
+    color: #e60073;
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -116,7 +116,7 @@ section {
 
 section h2 {
     font-size: 1.6rem;
-    color: cyan;
+    color: #e60073;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -157,7 +157,7 @@ footer {
 .menu-container {
   padding: 0px 30px;
   display: flex;
-  background-color: #1f2020;
+  background-color: #e60073;
   border: none;
   border-radius: 8px;
   gap: 16px;
