@@ -255,3 +255,43 @@ footer {
         height: 400px;
     }
 }
+/* Botões de navegação do Modal */
+.modal-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: 1px solid rgba(230, 0, 115, 0.4);
+    font-size: 28px;
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 10000;
+    transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    user-select: none;
+}
+
+.modal-btn:hover {
+    background: #e60073;
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.modal-btn-prev {
+    left: 20px;
+}
+
+.modal-btn-next {
+    right: 20px;
+}
+
+/* Responsividade dos botões em telas pequenas */
+@media (max-width: 600px) {
+    .modal-btn {
+        padding: 8px 12px;
+        font-size: 20px;
+    }
+    .modal-btn-prev { left: 10px; }
+    .modal-btn-next { right: 10px; }
+}
