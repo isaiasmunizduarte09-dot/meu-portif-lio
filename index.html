@@ -1,342 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UtF-8"> 
+    <meta charset="UTF-8"> 
     <title>Meu Portfólio</title>
-
-    <head>
- 
-
-  <style>
-
-    .carrossel-container {
-      display: flex !important; /* Força as fotos a ficarem lado a lado */
-      gap: 15px; /* Deixa um espaço entre os desenhos */
-      overflow-x: auto; /* Cria a barra de rolagem/arrastar horizontal */
-      scroll-snap-type: x mandatory; /* Faz a foto grudar na tela ao arrastar */
-      padding: 10px 0;
-      -webkit-overflow-scrolling: touch; /* Melhora o deslize no celular */
-    }
-
-    .carrossel-item {
-      flex: 0 0 auto; /* IMPEDE que as imagens fiquem esmagadas */
-      scroll-snap-align: start; /* Ponto onde a foto se alinha ao arrastar */
-    }
-
-    .carrossel-item img {
-      width: 280px; /* Altere para a largura que você quiser */
-      height: 350px; /* Altere para a altura que você quiser */
-      object-fit: cover; /* Ajusta o desenho sem distorcer ou esticar */
-      border-radius: 8px; /* Deixa os cantos arredondados */
-    }
-  </style>
-</head>
-
-
-    
+    <link rel="stylesheet" href="conteudo-css.css">
 </head>
 <body>
-    <!--cabeçãlho-->
+
+    <!-- Cabeçalho -->
     <header>
-        <h1>Isaías Muniz Duarte</h1>
-        <h2>Desenvolvedor & Artista Digital | Autodidata por Natureza</h2>
+            <h1>Isaías Muniz Duarte</h1>
+            <div class="menu-container">
+                
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <label for="menu-toggle" class="overlay"></label>
+            <nav>
+                
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#desenhos">Galeria</a>
+            <a href="#contato">Contato</a>
+        </nav>
+            <h2 id="desenvolvedor">Desenvolvedor & Artista Digital | Autodidata por Natureza</h2>
+    
+            </div>
+    </header>
+
+    <main>
         <p>Profissional autodidata focado na resolução de problemas, com transição 
             acadêmica em tecnologia (ADS) e forte inclinação para artes visuais e 
-        modelagem 3d. </p>
-        <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-        </nav>
-    </header>
-    <!--sobre mim-->
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Sou estudante de Análise e Desenvolvimento de Sistemas 
-            (ADS) e entusiasta do desenvolvimento de Jogos. Aprendi a operar a máquina,
-             softwares como Blender e a programação.
-             Gosto de unir a arte do desenho tradicional com tecnologia digital.</p>
-        <ul>
-            <li>Modelagem 3d Blender.</li>
-            <li>Lógica de Programação.</li>
-            <li>Desenhos Anatômicos, de  Personagens e Ilustrações Tradicionais e Digitais.</li>
-            <li>HTML 5 Básico (em aprendizado).</li>
-        </ul>
+            modelagem 3D.</p>
+        <!-- Sobre Mim -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou estudante de Análise e Desenvolvimento de Sistemas 
+                (ADS) e entusiasta do desenvolvimento de Jogos. Aprendi a operar a máquina,
+                softwares como Blender e a programação.
+                Gosto de unir a arte do desenho tradicional com tecnologia digital.</p>
+            <ul>
+                <li>Modelagem 3D no Blender.</li>
+                <li>Lógica de Programação.</li>
+                <li>Desenhos Anatômicos, de Personagens e Ilustrações Tradicionais e Digitais.</li>
+                <li>HTML5 e CSS3.</li>
+            </ul>
+        </section>
 
-    </section>
-    <hr>
-    <!--meus projetos-->
-    <section id="projetos">
-        <h2>Meus projetos</h2>
-        <!--projeo do Grão maromba-->
-        <article>
-            <h3>Projeto 1: Do papel ao 3d (Personagem autoral)</h3>
-            <p><strong>O que fiz:</strong> Criei o desenho a mão livre e fiz a modelagem digital
-                completa, até um cenário simples utilizando o Blender.</p>
-                <img src="graomaromba.png" alt="Grão-Maromba: Render do Personagem." width="350">
-                <figcaption><strong>Grão-Maromba:</strong> Render do personagem.</figcaption><br>
-                
-        </article>
-    <!--projeto: projetos de faculdade-->
+        <hr>
 
-        <article>
-         <h3>Projeto 2: Algoritmos e Linguagem C</h3>
-        <p><strong>O que fiz:</strong> Desenvolvimento de projetos Lógicos para a
-        faculdade de (ADS) exercitando estrutura de repetição e variáveis.</p>
-        <a href="https://literate-space-fishstick-x565q6wrg7g5frg.github.dev/">Ver
-        código no GitHub.
-        </a></article><br>
+        <!-- Meus Projetos -->
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            
+            <article>
+                <h3>Projeto 1: Do papel ao 3D (Personagem autoral)</h3>
+                <p><strong>O que fiz:</strong> Criei o desenho a mão livre e fiz a modelagem digital
+                    completa, até um cenário simples utilizando o Blender.</p>
+                <figure>
+                    <img src="graomaromba.png" alt="Grão-Maromba: Render do Personagem." width="350">
+                    <figcaption><strong>Grão-Maromba:</strong> Render do personagem.</figcaption>
+                </figure>
+            </article>
 
-        <!--desenhos-->
+            <article>
+                <h3>Projeto 2: Algoritmos e Linguagem C</h3>
+                <p><strong>O que fiz:</strong> Desenvolvimento de projetos lógicos para a
+                    faculdade de (ADS) exercitando estruturas de repetição e variáveis.</p>
+                <a href="https://literate-space-fishstick-x565q6wrg7g5frg.github.dev/" target="_blank" rel="noopener noreferrer">
+                    Ver código no GitHub
+                </a>
+            </article>
+        </section>
 
+        <hr>
+
+        <!-- Galeria de Arte -->
         <section id="desenhos">
-
             <h2>Galeria de Arte</h2>
             <p>Bem-vindo ao meu espaço de criação! Aqui, traços e cores ganham vida,
-                 e cada desenho conta um pedacinho da minha imaginação</p>
+                 e cada desenho conta um pedacinho da minha imaginação.</p>
 
-        <div class="carrossel-container"> 
-
-            <div class="carrossel-item">
-                <img src="angustia.jpeg" alt="Desenho 1" loading="lazy"> 
+            <div class="carrossel-container"> 
+                <div class="carrossel-item"><img src="angustia.jpeg" alt="Angústia" loading="lazy"></div>
+                <div class="carrossel-item"><img src="vinkin.jpeg" alt="Vinkin" loading="lazy"></div>
+                <div class="carrossel-item"><img src="yuna.jpeg" alt="Yuna" loading="lazy"></div>
+                <div class="carrossel-item"><img src="selvagem.jpeg" alt="Selvagem" loading="lazy"></div>
+                <div class="carrossel-item"><img src="romance.jpeg" alt="Romance" loading="lazy"></div>
+                <div class="carrossel-item"><img src="dance-macabree.jpeg" alt="Dança Macabra" loading="lazy"></div>
+                <div class="carrossel-item"><img src="darck.jpeg" alt="Dark" loading="lazy"></div>
+                <div class="carrossel-item"><img src="bela-rosto.jpeg" alt="Bela Rosto" loading="lazy"></div>
+                <div class="carrossel-item"><img src="bella-corpo.jpeg" alt="Bella Corpo" loading="lazy"></div>
+                <div class="carrossel-item"><img src="belmiro-bigode.jpeg" alt="Belmiro" loading="lazy"></div>
+                <div class="carrossel-item"><img src="camilla.jpeg" alt="Camilla" loading="lazy"></div>
+                <div class="carrossel-item"><img src="casal-de-anões.jpeg" alt="Casal de Anões" loading="lazy"></div>
+                <div class="carrossel-item"><img src="castelo.jpeg" alt="Castelo" loading="lazy"></div>
+                <div class="carrossel-item"><img src="ciborgue.jpeg" alt="Ciborgue" loading="lazy"></div>
+                <div class="carrossel-item"><img src="david.jpeg" alt="David" loading="lazy"></div>
+                <div class="carrossel-item"><img src="demonio.jpeg" alt="Demônio" loading="lazy"></div>
+                <div class="carrossel-item"><img src="esquilo.jpeg" alt="Esquilo" loading="lazy"></div>
+                <div class="carrossel-item"><img src="explorador.jpeg" alt="Explorador" loading="lazy"></div>
+                <div class="carrossel-item"><img src="female-ciborgue.jpeg" alt="Ciborgue Feminina" loading="lazy"></div>
+                <div class="carrossel-item"><img src="grão-maromba.jpeg" alt="Grão Maromba" loading="lazy"></div>
+                <div class="carrossel-item"><img src="guerreiro.jpeg" alt="Guerreiro" loading="lazy"></div>
+                <div class="carrossel-item"><img src="hbirda-selvagem.jpeg" alt="Híbrida Selvagem" loading="lazy"></div>
+                <div class="carrossel-item"><img src="hibrida.jpeg" alt="Híbrida" loading="lazy"></div>
+                <div class="carrossel-item"><img src="lauana.jpeg" alt="Lauana" loading="lazy"></div>
+                <div class="carrossel-item"><img src="loucura.jpeg" alt="Loucura" loading="lazy"></div>
+                <div class="carrossel-item"><img src="medo.jpeg" alt="Medo" loading="lazy"></div>
+                <div class="carrossel-item"><img src="menina-bolada.jpeg" alt="Menina Bolada" loading="lazy"></div>
+                <div class="carrossel-item"><img src="pausa pra foto.jpeg" alt="Pausa pra foto" loading="lazy"></div>
+                <div class="carrossel-item"><img src="pé-de-bode.jpeg" alt="Pé de Bode" loading="lazy"></div>
+                <div class="carrossel-item"><img src="pescando.jpeg" alt="Pescando" loading="lazy"></div>
+                <div class="carrossel-item"><img src="peso-nas-costas.jpeg" alt="Peso nas costas" loading="lazy"></div>
+                <div class="carrossel-item"><img src="rato-mago.jpeg" alt="Rato Mago" loading="lazy"></div>
+                <div class="carrossel-item"><img src="robo.jpeg" alt="Robô" loading="lazy"></div>
+                <div class="carrossel-item"><img src="vespa.jpeg" alt="Vespa" loading="lazy"></div>
+                <div class="carrossel-item"><img src="tempo-de-menino.jpeg" alt="Tempo de menino" loading="lazy"></div>
             </div>
-
-         <div class="carrossel-item">
-                <img src="vinkin.jpeg" alt="Desenho 2 " loading="lazy">
-            </div>
-
-         <div class="carrossel-item">
-                <img src="yuna.jpeg" alt="Desenho 3" loading="lazy">
-            </div>
-
-        <div class="carrossel-item">
-                <img src="selvagem.jpeg" alt="Desenho 4" loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="romance.jpeg" alt="Desenho 5"loading="lazy">
-            </div>
-        
-        <div class="carrossel-item">
-                <img src="dance-macabree.jpeg" alt="Desenho 6" loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="darck.jpeg" alt="Desenho 7"loading="lazy">
-            </div>
-    
-        <div class="carrossel-item">
-                <img src="bela-rosto.jpeg" alt="Desenho 8"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="bella-corpo.jpeg" alt="Desenho 9"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="belmiro-bigode.jpeg" alt="Desenho 10"loading="lazy">
-            </div>
-        
-        <div class="carrossel-item">
-                <img src="camilla.jpeg" alt="Desenho 11"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="casal-de-anões.jpeg" alt="Desenho 12"loading="lazy">
-            </div>
-        
-            <div class="carrossel-item">
-                <img src="castelo.jpeg" alt="Desenho 12"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="ciborgue.jpeg" alt="Desenho 14"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="david.jpeg" alt="Desenho 15"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="demonio.jpeg" alt="Desenho 16"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="esquilo.jpeg" alt="Desenho 17"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="explorador.jpeg" alt="Desenho 18"loading="lazy">
-            </div>
-        <div class="carrossel-item">
-                <img src="female-ciborgue.jpeg" alt="Desenho 19"loading="lazy">
-            </div>
-
-        <div class="carrossel-item">
-                <img src="grão-maromba.jpeg" alt="Desenho 20"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="guerreiro.jpeg" alt="Desenho 21"loading="lazy">
-            </div>
-        
-        <div class="carrossel-item">
-                <img src="hbirda-selvagem.jpeg" alt="Desenho 22"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="hibrida.jpeg" alt="Desenho 23"loading="lazy">
-            </div>
-
-        <div class="carrossel-item">
-                <img src="lauana.jpeg" alt="Desenho 24" loading="lazy">
-            </div>
-        
-
-        <div class="carrossel-item">
-                <img src="loucura.jpeg" alt="Desenho 25"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="medo.jpeg" alt="Desenho 26"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="menina-bolada.jpeg" alt="Desenho 27"loading="lazy">
-            </div>
-        
-        <div class="carrossel-item">
-                <img src="pausa pra foto.jpeg" alt="Desenho 28"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="pé-de-bode.jpeg" alt="Desenho 29"loading="lazy">
-            </div>
-        
-            <div class="carrossel-item">
-                <img src="pescando.jpeg" alt="Desenho 30"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="peso-nas-costas.jpeg" alt="Desenho 31"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="rato-mago.jpeg" alt="Desenho 32"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="robo.jpeg" alt="Desenho 33"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="vespa.jpeg" alt="Desenho 34"loading="lazy">
-            </div>
-            
-        <div class="carrossel-item">
-                <img src="tempo-de-menino.jpeg" alt="Desenho 35"loading="lazy">
-            </div>
-            
-        <div>
-
         </section>
-       
-    <!--conato-->
-
-        <footer id="contato">
-            <h2>Vamos Conversar?</h2>
-            <p>Estou em Lábrea-AM, buscando aprender novas habilidades e 
-                aberto a novos desafios.</p>
-            <p>E-mail:isaiasmunizduarte@gmail.com</p>
-            <p>&copy; 2026 - Desenvolvedor em HTML puro.</p>
-    
-        </footer>
-    </section>
-    <main>
     </main>
-    <!-- Caixinha que vai abrir a foto grande (fica invisível até você clicar) -->
-<div id="modal-foto" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
-  
-  <!-- Botão de fechar (X) -->
-  <span id="fechar-modal" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
-  
-  <!-- Onde a foto grande vai aparecer -->
-  <img id="foto-grande" src="" style="max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
-</div>
-<!-- Cole este código exatamente aqui, entre o </div> do modal e o </body> -->
-  <script>
-  // 1. Elementos do Modal (Tela Cheia)
-  const modal = document.getElementById('modal-foto');
-  const fotoGrande = document.getElementById('foto-grande');
-  const botaoFechar = document.getElementById('fechar-modal');
 
-  // 2. Lista com todas as imagens do seu carrossel
-  const imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
-  let indiceAtual = 0; // Guarda qual foto está aberta no momento
+    <!-- Contato -->
+    <footer id="contato">
+        <h2>Vamos Conversar?</h2>
+        <p>Estou em Lábrea-AM, buscando aprender novas habilidades e aberto a novos desafios.</p>
+        <p>E-mail: <a href="mailto:isaiasmunizduarte@gmail.com" style="color: cyan;">isaiasmunizduarte09@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaías-muniz-duarte-6a60273a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" style=" color: cyan;" target="_blank">linkedin.com/in/isaías-muniz-duarte-3b3b3b3b/</a></p>
+        <p>Ghithub: <a href="https://github.com/isaiasmunizduarte09-dot" style="color: cyan;">isaiasmunizduarte09-dot</a></p>
+        <p>&copy; 2026 - Isaías Muniz Duarte</p>
+    </footer>
 
-  // 3. Cria os botões de Avançar e Voltar dinamicamente
-  const botaoAnterior = document.createElement('button');
-  botaoAnterior.innerHTML = '&#10094;'; // Ícone de seta <
-  botaoAnterior.setAttribute('style', 'position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
+    <!-- Modal para Exibição das Fotos Grandes -->
+    <div id="modal-foto" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
+        <span id="fechar-modal" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="foto-grande" src="" alt="Imagem ampliada" style="max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
+    </div>
 
-  const botaoProximo = document.createElement('button');
-  botaoProximo.innerHTML = '&#10095;'; // Ícone de seta >
-  botaoProximo.setAttribute('style', 'position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
+    <!-- JavaScript Modal Script -->
+    <script>
+        const modal = document.getElementById('modal-foto');
+        const fotoGrande = document.getElementById('foto-grande');
+        const botaoFechar = document.getElementById('fechar-modal');
 
-  // Adiciona as setas dentro do painel escuro
-  modal.appendChild(botaoAnterior);
-  modal.appendChild(botaoProximo);
+        const imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
+        let indiceAtual = 0;
 
-  // 4. Função que atualiza a imagem exibida na tela cheia
-  function mostrarImagem(indice) {
-    if (indice < 0) indice = imagens.length - 1; // Se voltar da primeira, vai para a última
-    if (indice >= imagens.length) indice = 0;    // Se passar da última, volta para a primeira
-    
-    indiceAtual = indice;
-    fotoGrande.src = imagens[indiceAtual].src;
-    fotoGrande.alt = imagens[indiceAtual].alt;
-  }
+        const botaoAnterior = document.createElement('button');
+        botaoAnterior.innerHTML = '&#10094;';
+        botaoAnterior.setAttribute('style', 'position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
 
-  // 5. Configura o clique inicial nas miniaturas do carrossel
-  imagens.forEach((img, index) => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', function() {
-      modal.style.display = 'flex';
-      mostrarImagem(index); // Abre a imagem certa pelo número dela na lista
-    });
-  });
+        const botaoProximo = document.createElement('button');
+        botaoProximo.innerHTML = '&#10095;';
+        botaoProximo.setAttribute('style', 'position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 30px; padding: 10px 15px; cursor: pointer; border-radius: 5px; z-index: 10000;');
 
-  // 6. Eventos de clique nas setas de avançar e voltar
-  botaoAnterior.addEventListener('click', (e) => {
-    e.stopPropagation(); // Impede que o modal feche ao clicar na seta
-    mostrarImagem(indiceAtual - 1);
-  });
+        modal.appendChild(botaoAnterior);
+        modal.appendChild(botaoProximo);
 
-  botaoProximo.addEventListener('click', (e) => {
-    e.stopPropagation(); // Impede que o modal feche ao clicar na seta
-    mostrarImagem(indiceAtual + 1);
-  });
+        function mostrarImagem(indice) {
+            if (indice < 0) indice = imagens.length - 1;
+            if (indice >= imagens.length) indice = 0;
+            
+            indiceAtual = indice;
+            fotoGrande.src = imagens[indiceAtual].src;
+            fotoGrande.alt = imagens[indiceAtual].alt;
+        }
 
-  // 7. Navegação extra usando as setas do teclado (Esquerda / Direita)
-  document.addEventListener('keydown', function(e) {
-    if (modal.style.display === 'flex') {
-      if (e.key === 'ArrowLeft') mostrarImagem(indiceAtual - 1);
-      if (e.key === 'ArrowRight') mostrarImagem(indiceAtual + 1);
-      if (e.key === 'Escape') modal.style.display = 'none'; // Fecha no Esc
-    }
-  });
+        imagens.forEach((img, index) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                mostrarImagem(index);
+            });
+        });
 
-  // 8. Funções de fechar o Modal (No X ou clicando no fundo)
-  botaoFechar.addEventListener('click', function() {
-    modal.style.display = 'none';
-  });
+        botaoAnterior.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mostrarImagem(indiceAtual - 1);
+        });
 
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-</script>
+        botaoProximo.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mostrarImagem(indiceAtual + 1);
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (modal.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') mostrarImagem(indiceAtual - 1);
+                if (e.key === 'ArrowRight') mostrarImagem(indiceAtual + 1);
+                if (e.key === 'Escape') modal.style.display = 'none';
+            }
+        });
+
+        botaoFechar.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
-
 </html>
