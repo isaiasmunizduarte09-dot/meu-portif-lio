@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -9,48 +10,46 @@
 
     <!-- Cabeçalho -->
     <header>
-            <h1>Isaías Muniz Duarte</h1>
-            <div class="menu-container">
-                
-            <input class="menu-toggle" type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <label for="menu-toggle" class="overlay"></label>
+        <h1>Isaías Muniz Duarte</h1>
+        <div class="menu-container">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">&#9776;</label>
+            <label for="menu-toggle" class="overlay" aria-label="Fechar menu"></label>
             <nav>
-                
                 <a href="#sobre">Sobre</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#desenhos">Galeria</a>
-            <a href="#contato">Contato</a>
-        </nav>
-            <h2 id="desenvolvedor">Desenvolvedor & Artista Digital | 3D & Tech</h2>
-    
-            </div>
+                <a href="#contato">Contato</a>
+            </nav>
+            <h2 id="desenvolvedor">Desenvolvedor &amp; Artista Digital | 3D &amp; Tech</h2>
+        </div>
     </header>
 
     <main>
         <p>Profissional autodidata focado na resolução de problemas, com transição 
             acadêmica em tecnologia (ADS) e forte inclinação para artes visuais e 
-            modelagem 3D.</p> 
+            modelagem 3D.</p>
+
         <!-- Sobre Mim -->
         <section id="sobre">
             <h2>Sobre Mim</h2>
             <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS) com foco em desenvolvimento de software, modelação 3D e arte digital.</p>
             <ul class="habilidades">
-
                 <li class="hab-item">
                     <span class="hab-icon">💻</span>
                     <span class="hab-text">Lógica de Programação.</span>
                 </li>
-               
+
                 <li class="hab-item">
                     <span class="hab-icon">🧊</span>
-                    <span class="hab-text"></span>Modelagem 3D no Blender.</span>
+                    <span class="hab-text">Modelagem 3D no Blender.</span>
                 </li>
-                
+
                 <li class="hab-item">
                     <span class="hab-icon">✏️</span>
-                    <span class="hab-text"></span>Desenhos Anatômicos, de Personagens e Ilustrações Tradicionais e Digitais.</span>
+                    <span class="hab-text">Desenhos Anatômicos, de Personagens e Ilustrações Tradicionais e Digitais.</span>
                 </li>
+
                 <li class="hab-item">
                     <span class="hab-icon">🌐</span>
                     <span class="hab-text">HTML5 e CSS3.</span>
@@ -63,48 +62,45 @@
         <!-- Meus Projetos -->
         <section id="projetos">
             <h2>Meus Projetos</h2>
-            
+
             <article style="margin-bottom: 20px;">
                 <h3>Projeto 1: Do papel ao 3D (Personagem autoral)</h3>
                 <p><strong>O que fiz:</strong> Criei o desenho a mão livre e fiz a modelagem digital
                     completa, até um cenário simples utilizando o Blender.</p>
-                    <div class="carrossel-container">
-                        <div class="carrossel-item">
-
-                            <img src="graomaromba.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="graomaromba2.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="graomaromba3 (2).jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
-                        </div>
-                        <div class="carrossel-item">
-                            <video class="carrossel-video" src="GrãoMaromba.mp4" alt="Grão-Maromba: Render do Personagem." width="350" controls>
-                            </video>
-                        </div>
+                <div class="carrossel-container">
+                    <div class="carrossel-item">
+                        <img src="graomaromba.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
                     </div>
-                    <figure>Render do Personagem</figure style="text-align: center; font-style: italic; color: #666; margin-top: 5px;">
-            
+                    <div class="carrossel-item">
+                        <img src="graomaromba2.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="graomaromba3 (2).jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
+                    </div>
+                    <div class="carrossel-item">
+                        <video class="carrossel-video" src="GrãoMaromba.mp4" alt="Grão-Maromba: Render do Personagem." width="350" controls></video>
+                    </div>
+                </div>
+                <figure style="text-align: center; font-style: italic; color: #666; margin-top: 5px;">
+                    <figcaption>Render do Personagem</figcaption>
+                </figure>
             </article>
 
             <article style="margin-bottom: 20px;">
                 <h3>Projeto 2: Algoritmos e Linguagem C</h3>
                 <p><strong>O que fiz:</strong> Desenvolvimento de projetos lógicos para a
                     faculdade de (ADS) exercitando estruturas de repetição e variáveis.</p>
-                    <div class="carrossel-container">
-                        
-                        <div class="carrossel-item">
-                            <img src="calculadorac3.jpeg" alt="Algoritmos e Linguagem C" width="350">
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="calculadorac2.jpeg" alt="Algoritmos e Linguagem C" width="350">
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="calculadorac.jpeg" alt="Algoritmos e Linguagem C" width="350">
-                        </div>
-
+                <div class="carrossel-container">
+                    <div class="carrossel-item">
+                        <img src="calculadorac3.jpeg" alt="Algoritmos e Linguagem C" width="350">
                     </div>
+                    <div class="carrossel-item">
+                        <img src="calculadorac2.jpeg" alt="Algoritmos e Linguagem C" width="350">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="calculadorac.jpeg" alt="Algoritmos e Linguagem C" width="350">
+                    </div>
+                </div>
                 <a href="https://isaiasmunizduarte09-dot.github.io/calculadora-JS-HTML/" target="_blank" rel="noopener noreferrer">
                     Ver código no GitHub
                 </a>
@@ -117,15 +113,15 @@
                     Ver código no GitHub
                 </a>
                 <div class="carrossel-container">
-                  <div class="carrossel-item">
-                    <img src="cauculadora.png" alt="Calculadora Web Simples" width="350">
-                  </div>
-                  <div class="carrossel-item">
-                    <img src="codigo-da-pagina.jpeg" alt="Calculadora Web Simples" width="350">
-                  </div>
-                  <div class="carrossel-item">
-                    <img src="codigo-HTML_da_pagina.jpeg" alt="Calculadora Web Simples" width="350">
-                  </div>
+                    <div class="carrossel-item">
+                        <img src="cauculadora.png" alt="Calculadora Web Simples" width="350">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="codigo-da-pagina.jpeg" alt="Calculadora Web Simples" width="350">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="codigo-HTML_da_pagina.jpeg" alt="Calculadora Web Simples" width="350">
+                    </div>
                 </div>
             </article>
         </section>
@@ -136,9 +132,9 @@
         <section id="desenhos">
             <h2>Galeria de Arte</h2>
             <p>Bem-vindo ao meu espaço de criação! Aqui, traços e cores ganham vida,
-                 e cada desenho conta um pedacinho da minha imaginação.</p>
+                e cada desenho conta um pedacinho da minha imaginação.</p>
 
-            <div class="carrossel-container"> 
+            <div class="carrossel-container">
                 <div class="carrossel-item"><img src="angustia.jpeg" alt="Angústia" loading="lazy"></div>
                 <div class="carrossel-item"><img src="vinkin.jpeg" alt="Vinkin" loading="lazy"></div>
                 <div class="carrossel-item"><img src="yuna.jpeg" alt="Yuna" loading="lazy"></div>
@@ -183,8 +179,8 @@
         <h2>Vamos Conversar?</h2>
         <p>Estou em Lábrea-AM, buscando aprender novas habilidades e aberto a novos desafios.</p>
         <p>E-mail: <a href="mailto:isaiasmunizduarte@gmail.com" style="color: #c400e7;">isaiasmunizduarte09@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaías-muniz-duarte-6a60273a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" style=" color: #c400e7;" target="_blank">linkedin.com/in/isaías-muniz-duarte-3b3b3b3b/</a></p>
-        <p>Ghithub: <a href="https://github.com/isaiasmunizduarte09-dot" style="color: #c400e7;">isaiasmunizduarte09-dot</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaías-muniz-duarte-6a60273a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" style="color: #c400e7;" target="_blank" rel="noopener noreferrer">Isaías Muniz Duarte</a></p>
+        <p>Github: <a href="https://github.com/isaiasmunizduarte09-dot" style="color: #c400e7;" target="_blank" rel="noopener noreferrer">isaiasmunizduarte09-dot</a></p>
         <p>&copy; 2026 - Isaías Muniz Duarte</p>
     </footer>
 
@@ -195,98 +191,99 @@
     </div>
 
     <!-- JavaScript Modal Script -->
-     <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('modal-foto');
-    const fotoGrande = document.getElementById('foto-grande');
-    const botaoFechar = document.getElementById('fechar-modal');
-    
-    if (!modal || !fotoGrande) return;
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('modal-foto');
+            const fotoGrande = document.getElementById('foto-grande');
+            const botaoFechar = document.getElementById('fechar-modal');
 
-    let imagens = [];
-    let indiceAtual = 0;
+            if (!modal || !fotoGrande) return;
 
-    // Criando os botões com classes CSS em vez de inline styles
-    const botaoAnterior = document.createElement('button');
-    botaoAnterior.className = 'modal-btn modal-btn-prev';
-    botaoAnterior.innerHTML = '&#10094;';
-    botaoAnterior.setAttribute('aria-label', 'Imagem anterior');
+            let imagens = [];
+            let indiceAtual = 0;
 
-    const botaoProximo = document.createElement('button');
-    botaoProximo.className = 'modal-btn modal-btn-next';
-    botaoProximo.innerHTML = '&#10095;';
-    botaoProximo.setAttribute('aria-label', 'Próxima imagem');
+            // Criando os botões com classes CSS em vez de inline styles
+            const botaoAnterior = document.createElement('button');
+            botaoAnterior.className = 'modal-btn modal-btn-prev';
+            botaoAnterior.innerHTML = '&#10094;';
+            botaoAnterior.setAttribute('aria-label', 'Imagem anterior');
 
-    modal.appendChild(botaoAnterior);
-    modal.appendChild(botaoProximo);
+            const botaoProximo = document.createElement('button');
+            botaoProximo.className = 'modal-btn modal-btn-next';
+            botaoProximo.innerHTML = '&#10095;';
+            botaoProximo.setAttribute('aria-label', 'Próxima imagem');
 
-    function atualizarListaImagens() {
-        imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
-    }
+            modal.appendChild(botaoAnterior);
+            modal.appendChild(botaoProximo);
 
-    function mostrarImagem(indice) {
-        if (imagens.length === 0) return;
-        
-        // Loop de navegação (ciclo contínuo)
-        if (indice < 0) indice = imagens.length - 1;
-        if (indice >= imagens.length) indice = 0;
-        
-        indiceAtual = indice;
-        fotoGrande.src = imagens[indiceAtual].src;
-        fotoGrande.alt = imagens[indiceAtual].alt || 'Imagem ampliada';
-    }
+            function atualizarListaImagens() {
+                imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
+            }
 
-    function abrirModal(index) {
-        atualizarListaImagens();
-        mostrarImagem(index);
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Evita rolagem da página ao fundo
-        
-        // Adiciona atalhos de teclado apenas enquanto o modal estiver aberto
-        document.addEventListener('keydown', gerenciarTeclas);
-    }
+            function mostrarImagem(indice) {
+                if (imagens.length === 0) return;
 
-    function fecharModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = ''; // Restaura a rolagem da página
-        document.removeEventListener('keydown', gerenciarTeclas);
-    }
+                // Loop de navegação (ciclo contínuo)
+                if (indice < 0) indice = imagens.length - 1;
+                if (indice >= imagens.length) indice = 0;
 
-    function gerenciarTeclas(e) {
-        if (e.key === 'ArrowLeft') mostrarImagem(indiceAtual - 1);
-        if (e.key === 'ArrowRight') mostrarImagem(indiceAtual + 1);
-        if (e.key === 'Escape') fecharModal();
-    }
+                indiceAtual = indice;
+                fotoGrande.src = imagens[indiceAtual].src;
+                fotoGrande.alt = imagens[indiceAtual].alt || 'Imagem ampliada';
+            }
 
-    // Delegação de eventos no contêiner para abrir o modal
-    document.addEventListener('click', (e) => {
-        const imgClicada = e.target.closest('.carrossel-item img');
-        if (imgClicada) {
-            atualizarListaImagens();
-            const index = imagens.indexOf(imgClicada);
-            if (index !== -1) abrirModal(index);
-        }
-    });
+            function abrirModal(index) {
+                atualizarListaImagens();
+                mostrarImagem(index);
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
 
-    // Controles dos botões do modal
-    botaoAnterior.addEventListener('click', (e) => {
-        e.stopPropagation();
-        mostrarImagem(indiceAtual - 1);
-    });
+                // Adiciona atalhos de teclado apenas enquanto o modal estiver aberto
+                document.addEventListener('keydown', gerenciarTeclas);
+            }
 
-    botaoProximo.addEventListener('click', (e) => {
-        e.stopPropagation();
-        mostrarImagem(indiceAtual + 1);
-    });
+            function fecharModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+                document.removeEventListener('keydown', gerenciarTeclas);
+            }
 
-    if (botaoFechar) {
-        botaoFechar.addEventListener('click', fecharModal);
-    }
+            function gerenciarTeclas(e) {
+                if (e.key === 'ArrowLeft') mostrarImagem(indiceAtual - 1);
+                if (e.key === 'ArrowRight') mostrarImagem(indiceAtual + 1);
+                if (e.key === 'Escape') fecharModal();
+            }
 
-    // Fechar ao clicar fora da imagem
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) fecharModal();
-    });
-});</script>
+            // Delegação de eventos no contêiner para abrir o modal
+            document.addEventListener('click', (e) => {
+                const imgClicada = e.target.closest('.carrossel-item img');
+                if (imgClicada) {
+                    atualizarListaImagens();
+                    const index = imagens.indexOf(imgClicada);
+                    if (index !== -1) abrirModal(index);
+                }
+            });
+
+            // Controles dos botões do modal
+            botaoAnterior.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mostrarImagem(indiceAtual - 1);
+            });
+
+            botaoProximo.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mostrarImagem(indiceAtual + 1);
+            });
+
+            if (botaoFechar) {
+                botaoFechar.addEventListener('click', fecharModal);
+            }
+
+            // Fechar ao clicar fora da imagem
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) fecharModal();
+            });
+        });
+    </script>
 </body>
 </html>
