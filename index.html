@@ -2,9 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="conteudo-css.css">
 </head>
 <body>
 
@@ -13,7 +12,7 @@
             <h1>Isaías Muniz Duarte</h1>
             <div class="menu-container">
                 
-            <input type="checkbox" id="menu-toggle">
+            <input class="menu-toggle" type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <label for="menu-toggle" class="overlay"></label>
             <nav>
@@ -23,7 +22,7 @@
                 <a href="#desenhos">Galeria</a>
             <a href="#contato">Contato</a>
         </nav>
-            <h2 id="desenvolvedor">Desenvolvedor & Artista Digital | Autodidata por Natureza</h2>
+            <h2 id="desenvolvedor">Desenvolvedor & Artista Digital | 3D & Tech</h2>
     
             </div>
     </header>
@@ -31,19 +30,31 @@
     <main>
         <p>Profissional autodidata focado na resolução de problemas, com transição 
             acadêmica em tecnologia (ADS) e forte inclinação para artes visuais e 
-            modelagem 3D.</p>
+            modelagem 3D.</p> 
         <!-- Sobre Mim -->
         <section id="sobre">
             <h2>Sobre Mim</h2>
-            <p>Sou estudante de Análise e Desenvolvimento de Sistemas 
-                (ADS) e entusiasta do desenvolvimento de Jogos. Aprendi a operar a máquina,
-                softwares como Blender e a programação.
-                Gosto de unir a arte do desenho tradicional com tecnologia digital.</p>
-            <ul>
-                <li>Modelagem 3D no Blender.</li>
-                <li>Lógica de Programação.</li>
-                <li>Desenhos Anatômicos, de Personagens e Ilustrações Tradicionais e Digitais.</li>
-                <li>HTML5 e CSS3.</li>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS) com foco em desenvolvimento de software, modelação 3D e arte digital.</p>
+            <ul class="habilidades">
+
+                <li class="hab-item">
+                    <span class="hab-icon">💻</span>
+                    <span class="hab-text">Lógica de Programação.</span>
+                </li>
+               
+                <li class="hab-item">
+                    <span class="hab-icon">🧊</span>
+                    <span class="hab-text"></span>Modelagem 3D no Blender.</span>
+                </li>
+                
+                <li class="hab-item">
+                    <span class="hab-icon">✏️</span>
+                    <span class="hab-text"></span>Desenhos Anatômicos, de Personagens e Ilustrações Tradicionais e Digitais.</span>
+                </li>
+                <li class="hab-item">
+                    <span class="hab-icon">🌐</span>
+                    <span class="hab-text">HTML5 e CSS3.</span>
+                </li>
             </ul>
         </section>
 
@@ -53,23 +64,69 @@
         <section id="projetos">
             <h2>Meus Projetos</h2>
             
-            <article>
+            <article style="margin-bottom: 20px;">
                 <h3>Projeto 1: Do papel ao 3D (Personagem autoral)</h3>
                 <p><strong>O que fiz:</strong> Criei o desenho a mão livre e fiz a modelagem digital
                     completa, até um cenário simples utilizando o Blender.</p>
-                <figure>
-                    <img src="graomaromba.png" alt="Grão-Maromba: Render do Personagem." width="350">
-                    <figcaption><strong>Grão-Maromba:</strong> Render do personagem.</figcaption>
-                </figure>
+                    <div class="carrossel-container">
+                        <div class="carrossel-item">
+
+                            <img src="graomaromba.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="graomaromba2.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="graomaromba3 (2).jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
+                        </div>
+                        <div class="carrossel-item">
+                            <video class="carrossel-video" src="GrãoMaromba.mp4" alt="Grão-Maromba: Render do Personagem." width="350" controls>
+                            </video>
+                        </div>
+                    </div>
+                    <figure>Render do Personagem</figure style="text-align: center; font-style: italic; color: #666; margin-top: 5px;">
+            
             </article>
 
-            <article>
+            <article style="margin-bottom: 20px;">
                 <h3>Projeto 2: Algoritmos e Linguagem C</h3>
                 <p><strong>O que fiz:</strong> Desenvolvimento de projetos lógicos para a
                     faculdade de (ADS) exercitando estruturas de repetição e variáveis.</p>
-                <a href="https://literate-space-fishstick-x565q6wrg7g5frg.github.dev/" target="_blank" rel="noopener noreferrer">
+                    <div class="carrossel-container">
+                        
+                        <div class="carrossel-item">
+                            <img src="calculadorac3.jpeg" alt="Algoritmos e Linguagem C" width="350">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="calculadorac2.jpeg" alt="Algoritmos e Linguagem C" width="350">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="calculadorac.jpeg" alt="Algoritmos e Linguagem C" width="350">
+                        </div>
+
+                    </div>
+                <a href="https://isaiasmunizduarte09-dot.github.io/calculadora-JS-HTML/" target="_blank" rel="noopener noreferrer">
                     Ver código no GitHub
                 </a>
+            </article>
+
+            <article style="margin-bottom: 20px;">
+                <h3>Projeto 3: Calculadora Web Simples</h3>
+                <p><strong>O que fiz:</strong> Desenvolvi uma calculadora web simples utilizando HTML, CSS e JavaScript.</p>
+                <a href="https://isaiasmunizduarte09-dot.github.io/calculadora-JS-HTML/" target="_blank" rel="noopener noreferrer">
+                    Ver código no GitHub
+                </a>
+                <div class="carrossel-container">
+                  <div class="carrossel-item">
+                    <img src="cauculadora.png" alt="Calculadora Web Simples" width="350">
+                  </div>
+                  <div class="carrossel-item">
+                    <img src="codigo-da-pagina.jpeg" alt="Calculadora Web Simples" width="350">
+                  </div>
+                  <div class="carrossel-item">
+                    <img src="codigo-HTML_da_pagina.jpeg" alt="Calculadora Web Simples" width="350">
+                  </div>
+                </div>
             </article>
         </section>
 
@@ -125,9 +182,9 @@
     <footer id="contato">
         <h2>Vamos Conversar?</h2>
         <p>Estou em Lábrea-AM, buscando aprender novas habilidades e aberto a novos desafios.</p>
-        <p>E-mail: <a href="mailto:isaiasmunizduarte@gmail.com" style="color: #e60073;">isaiasmunizduarte09@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaías-muniz-duarte-6a60273a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" style=" color: #e60073;" target="_blank">linkedin.com/in/isaías-muniz-duarte-3b3b3b3b/</a></p>
-        <p>Ghithub: <a href="https://github.com/isaiasmunizduarte09-dot" style="color: #e60073;">isaiasmunizduarte09-dot</a></p>
+        <p>E-mail: <a href="mailto:isaiasmunizduarte@gmail.com" style="color: #c400e7;">isaiasmunizduarte09@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaías-muniz-duarte-6a60273a7?utm_source=share_via&utm_content=profile&utm_medium=member_android" style=" color: #c400e7;" target="_blank">linkedin.com/in/isaías-muniz-duarte-3b3b3b3b/</a></p>
+        <p>Ghithub: <a href="https://github.com/isaiasmunizduarte09-dot" style="color: #c400e7;">isaiasmunizduarte09-dot</a></p>
         <p>&copy; 2026 - Isaías Muniz Duarte</p>
     </footer>
 
@@ -136,7 +193,9 @@
         <span id="fechar-modal" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
         <img id="foto-grande" src="" alt="Imagem ampliada" style="max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
     </div>
- <script>
+
+    <!-- JavaScript Modal Script -->
+     <script>
    document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal-foto');
     const fotoGrande = document.getElementById('foto-grande');
@@ -228,7 +287,6 @@
     modal.addEventListener('click', (e) => {
         if (e.target === modal) fecharModal();
     });
-});
-     </script>
+});</script>
 </body>
 </html>
