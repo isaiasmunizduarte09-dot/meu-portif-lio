@@ -31,7 +31,7 @@
             modelagem 3D.</p>
 
         <!-- Sobre Mim -->
-        <section id="sobre">
+        <section id="sobre" class="card">
             <h2>Sobre Mim</h2>
             <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS) com foco em desenvolvimento de software, modelação 3D e arte digital.</p>
             <ul class="habilidades">
@@ -60,68 +60,42 @@
         <hr>
 
         <!-- Meus Projetos -->
-        <section id="projetos">
+        <section id="projetos" class="card">
             <h2>Meus Projetos</h2>
 
-            <article style="margin-bottom: 20px;">
+            <article class="project" data-project="projeto-1">
                 <h3>Projeto 1: Do papel ao 3D (Personagem autoral)</h3>
                 <p><strong>O que fiz:</strong> Criei o desenho a mão livre e fiz a modelagem digital
                     completa, até um cenário simples utilizando o Blender.</p>
-                <div class="carrossel-container">
-                    <div class="carrossel-item">
-                        <img src="graomaromba.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="graomaromba2.jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="graomaromba3 (2).jpeg" alt="Grão-Maromba: Render do Personagem." width="350">
-                    </div>
-                    <div class="carrossel-item">
-                        <video class="carrossel-video" src="GrãoMaromba.mp4" alt="Grão-Maromba: Render do Personagem." width="350" controls></video>
-                    </div>
+                <div class="carrossel-container" role="list" aria-label="Carrossel do Projeto 1">
+                    <div class="carrossel-item"><img src="graomaromba.jpeg" alt="Grão-Maromba: Render do Personagem." loading="lazy"></div>
+                    <div class="carrossel-item"><img src="graomaromba2.jpeg" alt="Grão-Maromba: Render do Personagem 2." loading="lazy"></div>
+                    <div class="carrossel-item"><img src="graomaromba3 (2).jpeg" alt="Grão-Maromba: Render do Personagem 3." loading="lazy"></div>
+                    <div class="carrossel-item"><video class="carrossel-video" src="GrãoMaromba.mp4" aria-label="Vídeo do Projeto" controls></video></div>
                 </div>
-                <figure style="text-align: center; font-style: italic; color: #666; margin-top: 5px;">
-                    <figcaption>Render do Personagem</figcaption>
-                </figure>
+                <figure style="text-align: center; font-style: italic; color: #aaa; margin-top: 5px;"><figcaption>Render do Personagem</figcaption></figure>
             </article>
 
-            <article style="margin-bottom: 20px;">
+            <article class="project" data-project="projeto-2">
                 <h3>Projeto 2: Algoritmos e Linguagem C</h3>
                 <p><strong>O que fiz:</strong> Desenvolvimento de projetos lógicos para a
                     faculdade de (ADS) exercitando estruturas de repetição e variáveis.</p>
-                <div class="carrossel-container">
-                    <div class="carrossel-item">
-                        <img src="calculadorac3.jpeg" alt="Algoritmos e Linguagem C" width="350">
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="calculadorac2.jpeg" alt="Algoritmos e Linguagem C" width="350">
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="calculadorac.jpeg" alt="Algoritmos e Linguagem C" width="350">
-                    </div>
+                <div class="carrossel-container" role="list" aria-label="Carrossel do Projeto 2">
+                    <div class="carrossel-item"><img src="calculadorac3.jpeg" alt="Algoritmos e Linguagem C 1" loading="lazy"></div>
+                    <div class="carrossel-item"><img src="calculadorac2.jpeg" alt="Algoritmos e Linguagem C 2" loading="lazy"></div>
+                    <div class="carrossel-item"><img src="calculadorac.jpeg" alt="Algoritmos e Linguagem C 3" loading="lazy"></div>
                 </div>
-                <a href="https://isaiasmunizduarte09-dot.github.io/calculadora-JS-HTML/" target="_blank" rel="noopener noreferrer">
-                    Ver código no GitHub
-                </a>
+                <a href="https://isaiasmunizduarte09-dot.github.io/calculadora-JS-HTML/" target="_blank" rel="noopener noreferrer" class="btn-link">Ver código no GitHub</a>
             </article>
 
-            <article style="margin-bottom: 20px;">
+            <article class="project" data-project="projeto-3">
                 <h3>Projeto 3: Calculadora Web Simples</h3>
                 <p><strong>O que fiz:</strong> Desenvolvi uma calculadora web simples utilizando HTML, CSS e JavaScript.</p>
-                <a href="https://isaiasmunizduarte09-dot.github.io/calculadora-JS-HTML/" target="_blank" rel="noopener noreferrer">
-                    Ver código no GitHub
-                </a>
-                <div class="carrossel-container">
-                    <div class="carrossel-item">
-                        <img src="cauculadora.png" alt="Calculadora Web Simples" width="350">
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="codigo-da-pagina.jpeg" alt="Calculadora Web Simples" width="350">
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="codigo-HTML_da_pagina.jpeg" alt="Calculadora Web Simples" width="350">
-                    </div>
+                <a href="https://isaiasmunizduarte09-dot.github.io/calculadora-JS-HTML/" target="_blank" rel="noopener noreferrer" class="btn-link">Ver código no GitHub</a>
+                <div class="carrossel-container" role="list" aria-label="Carrossel do Projeto 3">
+                    <div class="carrossel-item"><img src="cauculadora.png" alt="Calculadora Web Simples" loading="lazy"></div>
+                    <div class="carrossel-item"><img src="codigo-da-pagina.jpeg" alt="Código da Página" loading="lazy"></div>
+                    <div class="carrossel-item"><img src="codigo-HTML_da_pagina.jpeg" alt="Código HTML da Página" loading="lazy"></div>
                 </div>
             </article>
         </section>
@@ -129,12 +103,12 @@
         <hr>
 
         <!-- Galeria de Arte -->
-        <section id="desenhos">
+        <section id="desenhos" class="card">
             <h2>Galeria de Arte</h2>
             <p>Bem-vindo ao meu espaço de criação! Aqui, traços e cores ganham vida,
                 e cada desenho conta um pedacinho da minha imaginação.</p>
 
-            <div class="carrossel-container">
+            <div class="carrossel-container" role="list" aria-label="Galeria Geral">
                 <div class="carrossel-item"><img src="angustia.jpeg" alt="Angústia" loading="lazy"></div>
                 <div class="carrossel-item"><img src="vinkin.jpeg" alt="Vinkin" loading="lazy"></div>
                 <div class="carrossel-item"><img src="yuna.jpeg" alt="Yuna" loading="lazy"></div>
@@ -185,8 +159,8 @@
     </footer>
 
     <!-- Modal para Exibição das Fotos Grandes -->
-    <div id="modal-foto" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
-        <span id="fechar-modal" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <div id="modal-foto" aria-hidden="true" role="dialog" aria-label="Janela de imagem" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
+        <button id="fechar-modal" aria-label="Fechar" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; background: transparent; border: none;">&times;</button>
         <img id="foto-grande" src="" alt="Imagem ampliada" style="max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
     </div>
 
@@ -201,6 +175,7 @@
 
             let imagens = [];
             let indiceAtual = 0;
+            let currentContainer = null; // armazena o carrossel atual
 
             // Criando os botões com classes CSS em vez de inline styles
             const botaoAnterior = document.createElement('button');
@@ -216,8 +191,13 @@
             modal.appendChild(botaoAnterior);
             modal.appendChild(botaoProximo);
 
-            function atualizarListaImagens() {
-                imagens = Array.from(document.querySelectorAll('.carrossel-item img'));
+            function atualizarListaImagens(container) {
+                currentContainer = container || null;
+                if (!currentContainer) {
+                    imagens = [];
+                    return;
+                }
+                imagens = Array.from(currentContainer.querySelectorAll('.carrossel-item img'));
             }
 
             function mostrarImagem(indice) {
@@ -228,14 +208,16 @@
                 if (indice >= imagens.length) indice = 0;
 
                 indiceAtual = indice;
-                fotoGrande.src = imagens[indiceAtual].src;
+                fotoGrande.src = imagens[indiceAtual].dataset.src || imagens[indiceAtual].src;
                 fotoGrande.alt = imagens[indiceAtual].alt || 'Imagem ampliada';
             }
 
-            function abrirModal(index) {
-                atualizarListaImagens();
-                mostrarImagem(index);
+            function abrirModal(index, container) {
+                atualizarListaImagens(container);
+                if (imagens.length === 0) return;
+                mostrarImagem(index || 0);
                 modal.style.display = 'flex';
+                modal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
 
                 // Adiciona atalhos de teclado apenas enquanto o modal estiver aberto
@@ -244,6 +226,7 @@
 
             function fecharModal() {
                 modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = '';
                 document.removeEventListener('keydown', gerenciarTeclas);
             }
@@ -254,13 +237,15 @@
                 if (e.key === 'Escape') fecharModal();
             }
 
-            // Delegação de eventos no contêiner para abrir o modal
+            // Delegação de eventos no contêiner para abrir o modal — agora seleciona só imagens do mesmo carrossel
             document.addEventListener('click', (e) => {
                 const imgClicada = e.target.closest('.carrossel-item img');
                 if (imgClicada) {
-                    atualizarListaImagens();
+                    const container = imgClicada.closest('.carrossel-container');
+                    if (!container) return;
+                    atualizarListaImagens(container);
                     const index = imagens.indexOf(imgClicada);
-                    if (index !== -1) abrirModal(index);
+                    if (index !== -1) abrirModal(index, container);
                 }
             });
 
